@@ -14,4 +14,4 @@ class TaskWizard(models.TransientModel):
             'from_date': self.from_date,
             'to_date': self.to_date,
         }
-        return self.env.ref("task_manager.task_report_action").report_action(self, data=data)
+        return self.env.ref("tm_yasirali.task_report_action").report_action(self, data=data)

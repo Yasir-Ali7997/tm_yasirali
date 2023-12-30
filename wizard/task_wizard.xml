@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="task_manager.task_manager_wizards_view_form" model="ir.ui.view">
-        <field name="name">task_manager task_manager_wizards_form_view</field>
+    <record id="tm_yasirali.tm_yasirali_wizards_view_form" model="ir.ui.view">
+        <field name="name">tm_yasirali tm_yasirali_wizards_form_view</field>
         <field name="model">task.wizard</field>
         <field name="arch" type="xml">
             <form string="Task Report">
@@ -23,11 +23,11 @@
         </field>
     </record>
 
-    <record id="task_manager.task_manager_wizard_action" model="ir.actions.act_window">
+    <record id="tm_yasirali.tm_yasirali_wizard_action" model="ir.actions.act_window">
         <field name="name">Task</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">task.wizard</field>
-        <field name="view_id" ref="task_manager.task_manager_wizards_view_form"/>
+        <field name="view_id" ref="tm_yasirali.tm_yasirali_wizards_view_form"/>
         <field name="view_mode">form</field>
         <field name="target">new</field>
     </record>

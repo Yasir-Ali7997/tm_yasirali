@@ -4,7 +4,7 @@ from datetime import datetime
 
 
 class TaskReport(models.AbstractModel):
-    _name = 'report.task_manager.task_report_custom'
+    _name = 'report.tm_yasirali.task_report_custom'
     _description = 'Task Report'
 
     @api.model

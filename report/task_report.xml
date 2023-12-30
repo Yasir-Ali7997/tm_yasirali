@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="task_report_custom">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="row" style="font-size: 18px;">
+                            <div class="col-3">
+                                <span>
+                                    <strong>
+                                        Date From:
+                                    </strong>
+                                </span>
+                            </div>
+                            <div class="col-3">
+                                <t t-esc="date_from"/>
+                            </div>
+                            <div class="col-3">
+                                <span>
+                                    <strong>
+                                        Date To:
+                                    </strong>
+                                </span>
+                            </div>
+                            <div class="col-3">
+                                <t t-esc="date_to"/>
+                            </div>
+                        </div>
+                        <hr/>
+                        <br/>
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th class="text-center">Sr.No</th>
+                                    <th class="text-center">TITLE</th>
+                                    <th class="text-center">DEADLINE</th>
+                                    <th class="text-center">NO OF DAYS LEFT</th>
+                                    <th class="text-center">STATE</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-set="serial_number" t-value="1"/>
+                                <t t-foreach="task_record" t-as="task">
+                                    <tr>
+                                        <td class="text-center">
+                                            <t t-esc="serial_number"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <t t-esc="task.name"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <t t-esc="task.deadline"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <t t-esc="task.no_of_days"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <t t-esc="task.state"/>
+                                        </td>
+                                    </tr>
+                                    <t t-set="serial_number" t-value="serial_number + 1"/>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

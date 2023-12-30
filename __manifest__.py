@@ -12,9 +12,11 @@
     'category': 'Uncategorized',
     'version': '17.0',
     'depends': ['base', 'mail'],
-    # always loaded
     'data': [
         'security/ir.model.access.csv',
+        'wizard/task_wizard.xml',
         'views/task.xml',
+        'report/report.xml',
+        'report/task_report.xml',
     ],
 }

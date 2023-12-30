@@ -121,5 +121,18 @@
         <menuitem name="Task Manager" id="task_manager.menu_root" sequence="1"/>
         <!-- Task Menu -->
         <menuitem name="Task" id="task_manager.task_menu_root" parent="task_manager.menu_root" action="task_manager.task_view_action" sequence="2"/>
+        <!--        Wizard Menu-->
+        <menuitem id="task_manager.task_wizards_menu"
+                  name="Report"
+                  parent="task_manager.menu_root"
+                  sequence="3"
+        />
+        <!--        Wizard Report Menu-->
+        <menuitem id="task_manager.task_report_menu"
+                  action="task_manager.task_manager_wizard_action"
+                  name="Task Report"
+                  parent="task_manager.task_wizards_menu"
+                  sequence="1"
+        />
     </data>
 </odoo>

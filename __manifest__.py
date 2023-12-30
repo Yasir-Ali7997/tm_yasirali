@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Task Management",
+    'name': "TM-YASIRALI",
 
     'summary': "Task Management Module is about to task and its deadline",
 

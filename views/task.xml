@@ -6,6 +6,7 @@
             <field name="arch" type="xml">
                 <form string="Task">
                     <header>
+                        <button name="task_complete" type="object" string="Complete" class="btn-primary" invisible="state != 'draft'"/>
                         <field name="state" widget="statusbar"/>
                     </header>
                     <sheet>

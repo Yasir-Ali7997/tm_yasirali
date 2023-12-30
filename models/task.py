@@ -30,6 +30,10 @@ class Task(models.Model):
             else:
                 record.no_of_days = 0
 
+    def task_complete(self):
+        for rec in self:
+            rec.state = 'completed'
+
     def unlink(self):
         for record in self:
             if record.state != 'draft':
